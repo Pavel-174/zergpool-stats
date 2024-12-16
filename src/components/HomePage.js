@@ -1,10 +1,12 @@
+"use client"
 import Image from "next/image";
-import { redirect } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function HomePage() {
-  const id = localStorage.getItem('wallet');
   const [wallet, setWallet] = useState('');
+
+  const {replace} = useRouter();
 
   return (
     <>
@@ -30,7 +32,7 @@ export default function HomePage() {
         <button 
           type="button" 
           className="bg-green-500 text-black py-2 px-4 rounded-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mb-4 w-4/5 max-w-xl"
-          onClick={() => {localStorage.setItem('wallet', wallet); wallet !== '' && redirect('/statistic')}}
+          onClick={() => {localStorage.setItem('wallet', wallet); wallet !== '' && replace('/statistic')}}
         >
           Show stats
         </button>
