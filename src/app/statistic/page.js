@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 export default function StatisticPage() {
 
   const fetchData = async () => {
-    const response = await fetch("/api/example", config);
-    const data = response.json();
+    const response = await fetch("api/api/wallet?address=151dtEMndfwcdW4PepzUhMZugcjfctaZXY");
+    console.log(response)
   }
     
   fetchData();
