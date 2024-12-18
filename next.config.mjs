@@ -4,7 +4,7 @@ const nextConfig = {
         return [
             {
               source: '/api/:path*',
-              destination: 'https://zergpool.com/:path*'
+              destination: 'https://zergpool.com/api/:path*'
             }
         ]
     }
