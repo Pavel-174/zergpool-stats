@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function StatisticPage() {
+export default function NotFound() {
 
   return (
     <div className="flex items-center justify-center min-h-dvh">
