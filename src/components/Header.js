@@ -19,7 +19,10 @@ export default function Header() {
           <h1 className="ml-4">YOUR STATS</h1>
       </div>
       <div className="flex flex-row items-center">
-        <span>Wallet: { cutAddress(address, 6, 6) }</span>
+        <div>
+          <span className="text-zinc-500">Wallet:</span>
+          <span className="text-green-500">{" " + cutAddress(address, 6, 6) }</span>
+        </div>
         <button 
           className="ml-4"
           onClick={() => {
